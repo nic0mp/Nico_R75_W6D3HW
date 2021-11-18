@@ -8,11 +8,31 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 <link rel="stylesheet" href="css/style.css">
-<script src="https://ergast.com/api/f1/2020/2/driverStandings.json"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script src="js/main.js" defer></script>
 <title>RACeCAR API</title>
 </head>
 <body>
+      <!-- Ranger data HTML elements -->
+      <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-12">
+                <form name="testData" id="form">
+                    <label for="season">Year: </label>
+                    <input type="text" name="season" id="season">
+            
+                    <label for="round">Round: </label>
+                    <input type="text" name="round" id="round">
+
+                <button class="btn btn-primary" type='submit' id='submitButton' onclick='loadData()'>Find Standings</button>                
+                </form>
+                <section class="list-group racer-list">
+                    <!-- Place API content here -->
+                </section>
+            </div>
+        </div>
+    </div>
+
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.0/js/bootstrap.min.js"></script>
