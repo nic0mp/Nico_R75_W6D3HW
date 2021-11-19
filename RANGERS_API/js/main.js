@@ -5,12 +5,13 @@ const getData = async () => {
 }
 // Create constants to hold DOM elements
 const DOM_Elements = {
-    rangers: '.ranger-list'
+    rangers: '.ranger-list',
 }
 
 // Creation of the Ranger List HTML
 const create_list = (id, name, color, season) =>{ 
-    const html = `<a href ="#" class="list-group-item list-group-item-action list-group-item-light" id="${id}"> ${name} 
+    const html = `<a href ="#" class="list-group-item list-group-item-action list-group-item-light" id="${id}"> Name: ${name} <li>color: ${color}</li>
+    <li>season: ${season}</li><li>
     </a>`;
     // Access document to paste content
     document.querySelector(DOM_Elements.rangers).insertAdjacentHTML('beforeend', html)
