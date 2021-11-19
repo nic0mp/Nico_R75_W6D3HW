@@ -16,41 +16,41 @@ function color_change(){
 color_button.addEventListener('click', color_change)
 
 // // Adding New Button via JS
-// let button = document.createElement('button')
-// let button_display = document.createElement('h2')
+let button = document.createElement('button')
+let button_display = document.createElement('h2')
+// Add text to the button
+button.innerHTML = ' Here I am'
+document.body.append(button)
 
-// button.innerHTML = ' Here I am'
-// document.body.append(button)
-
-// button.addEventListener('click', function (){
-//     button_display.innerHTML = 'More JS Info Here ...'
-//     document.body.append(button_display)
-// })
+button.addEventListener('click', function (){
+    button_display.innerHTML = 'More JS Info Here ...'
+    document.body.append(button_display)
+})
 
 // // Grab copied text
-// const source = document.querySelector('div.source')
-// source.addEventListener('copy', (event ) =>{
+const source = document.querySelector('div.source')
+source.addEventListener('copy', (event ) =>{
     
-//     console.log(event)
-//     const selection = document.getSelection();
-//     event.clipboardData.setData('text/plain', selection.toString().toLowerCase());
-//     event.preventDefault();
-// })
+    console.log(event)
+    const selection = document.getSelection();
+    event.clipboardData.setData('text/plain', selection.toString().toLowerCase());
+    event.preventDefault();
+})
 
-// // Grabbing Form Data From a Submit event
-// const form = document.querySelector('#testDataForm')
-// console.log(form)
+// // Create variale for form
+const form = document.querySelector('#testDataForm')
+console.log(form)
 
 // // Add event listener for submit event
-// form.addEventListener('submit', ( event ) => {
-//     event.preventDefault();
-//     let query_first = document.querySelector('#first-name');
-//     let query_last = document.querySelector('#last-name')
-//     console.log(query_first)
-//     console.log(event)
-//     let first_name = event.path[0][0].value;
-//     let last_name = event.path[0][1].value;
+form.addEventListener('submit', ( event ) => {
+    event.preventDefault();
+    let query_first = document.querySelector('#first-name');
+    let query_last = document.querySelector('#last-name');
+    console.log(query_first)
+    console.log(event)
+    // let first_name = event.path[0][0].value;
+    // let last_name = event.path[0][1].value;
     
     
-//     console.log(`This came from the query selector: ${first_name}, ${last_name}`)
-// } )
+    // console.log(`This came from the query selector: ${first_name}, ${last_name}`)
+} )
